@@ -1,0 +1,2467 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 145 | Scripts: 1 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.tilehub v2
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Enabled"] = false;
+G2L["1"]["Name"] = [[tilehub v2]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
+
+
+-- StarterGui.tilehub v2.main
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["Visible"] = false;
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(14, 14, 14);
+G2L["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["2"]["Size"] = UDim2.new(0.72346, 0, 0.64747, 0);
+G2L["2"]["Position"] = UDim2.new(0.49946, 0, 0.49712, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[main]];
+
+
+-- StarterGui.tilehub v2.main.UICorner
+G2L["3"] = Instance.new("UICorner", G2L["2"]);
+
+
+
+-- StarterGui.tilehub v2.main.tilehublabel
+G2L["4"] = Instance.new("TextLabel", G2L["2"]);
+G2L["4"]["TextWrapped"] = true;
+G2L["4"]["TextStrokeTransparency"] = 0;
+G2L["4"]["ZIndex"] = 2;
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["TextSize"] = 14;
+G2L["4"]["TextScaled"] = true;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4"]["BackgroundTransparency"] = 1;
+G2L["4"]["Size"] = UDim2.new(0.34384, 0, 0.10397, 0);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["Text"] = [[tilehub v2]];
+G2L["4"]["Name"] = [[tilehublabel]];
+G2L["4"]["Position"] = UDim2.new(-0.05631, 0, 0.03203, 0);
+
+
+-- StarterGui.tilehub v2.main.tilehublabel.UIAspectRatioConstraint
+G2L["5"] = Instance.new("UIAspectRatioConstraint", G2L["4"]);
+G2L["5"]["AspectRatio"] = 6.89655;
+
+
+-- StarterGui.tilehub v2.main.UIStroke
+G2L["6"] = Instance.new("UIStroke", G2L["2"]);
+G2L["6"]["Thickness"] = 4;
+
+
+-- StarterGui.tilehub v2.main.mainframe
+G2L["7"] = Instance.new("Frame", G2L["2"]);
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(25, 24, 24);
+G2L["7"]["Size"] = UDim2.new(0.97641, 0, 0.10346, 0);
+G2L["7"]["Position"] = UDim2.new(0.01365, 0, 0.03203, 0);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Name"] = [[mainframe]];
+
+
+-- StarterGui.tilehub v2.main.mainframe.UICorner
+G2L["8"] = Instance.new("UICorner", G2L["7"]);
+
+
+
+-- StarterGui.tilehub v2.main.mainframe.UIAspectRatioConstraint
+G2L["9"] = Instance.new("UIAspectRatioConstraint", G2L["7"]);
+G2L["9"]["AspectRatio"] = 19.72414;
+
+
+-- StarterGui.tilehub v2.main.mainframe.close
+G2L["a"] = Instance.new("TextButton", G2L["7"]);
+G2L["a"]["TextWrapped"] = true;
+G2L["a"]["BorderSizePixel"] = 0;
+G2L["a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a"]["TextSize"] = 14;
+G2L["a"]["TextScaled"] = true;
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(207, 0, 0);
+G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a"]["ZIndex"] = 2;
+G2L["a"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["a"]["Size"] = UDim2.new(0.041, 0, 0.814, 0);
+G2L["a"]["Name"] = [[close]];
+G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["Text"] = [[x]];
+G2L["a"]["Position"] = UDim2.new(0.97649, 0, 0.47596, 0);
+
+
+-- StarterGui.tilehub v2.main.mainframe.close.UIStroke
+G2L["b"] = Instance.new("UIStroke", G2L["a"]);
+
+
+
+-- StarterGui.tilehub v2.main.mainframe.close.UICorner
+G2L["c"] = Instance.new("UICorner", G2L["a"]);
+
+
+
+-- StarterGui.tilehub v2.main.mainframe.close.UIAspectRatioConstraint
+G2L["d"] = Instance.new("UIAspectRatioConstraint", G2L["a"]);
+G2L["d"]["AspectRatio"] = 0.99348;
+
+
+-- StarterGui.tilehub v2.main.UIAspectRatioConstraint
+G2L["e"] = Instance.new("UIAspectRatioConstraint", G2L["2"]);
+G2L["e"]["AspectRatio"] = 2.08541;
+
+
+-- StarterGui.tilehub v2.main.bframe
+G2L["f"] = Instance.new("Frame", G2L["2"]);
+G2L["f"]["BorderSizePixel"] = 0;
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(25, 24, 24);
+G2L["f"]["Size"] = UDim2.new(0.97853, 0, 0.10346, 0);
+G2L["f"]["Position"] = UDim2.new(0.01005, 0, 0.87755, 0);
+G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["Name"] = [[bframe]];
+
+
+-- StarterGui.tilehub v2.main.bframe.UICorner
+G2L["10"] = Instance.new("UICorner", G2L["f"]);
+
+
+
+-- StarterGui.tilehub v2.main.bframe.UIAspectRatioConstraint
+G2L["11"] = Instance.new("UIAspectRatioConstraint", G2L["f"]);
+G2L["11"]["AspectRatio"] = 19.72414;
+
+
+-- StarterGui.tilehub v2.main.bframe.game
+G2L["12"] = Instance.new("TextButton", G2L["f"]);
+G2L["12"]["TextWrapped"] = true;
+G2L["12"]["TextStrokeTransparency"] = 0;
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["TextSize"] = 14;
+G2L["12"]["TextScaled"] = true;
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(14, 14, 14);
+G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["12"]["ZIndex"] = 2;
+G2L["12"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["12"]["Size"] = UDim2.new(0.18364, 0, 0.87069, 0);
+G2L["12"]["Name"] = [[game]];
+G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["Text"] = [[game]];
+G2L["12"]["Position"] = UDim2.new(0.22651, 0, 2.3428, 0);
+
+
+-- StarterGui.tilehub v2.main.bframe.game.UICorner
+G2L["13"] = Instance.new("UICorner", G2L["12"]);
+
+
+
+-- StarterGui.tilehub v2.main.bframe.game.UIAspectRatioConstraint
+G2L["14"] = Instance.new("UIAspectRatioConstraint", G2L["12"]);
+G2L["14"]["AspectRatio"] = 4.16;
+
+
+-- StarterGui.tilehub v2.main.bframe.schub
+G2L["15"] = Instance.new("TextButton", G2L["f"]);
+G2L["15"]["TextWrapped"] = true;
+G2L["15"]["TextStrokeTransparency"] = 0;
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["TextSize"] = 14;
+G2L["15"]["TextScaled"] = true;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(14, 14, 14);
+G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["15"]["ZIndex"] = 2;
+G2L["15"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["15"]["Size"] = UDim2.new(0.18364, 0, 0.87069, 0);
+G2L["15"]["Name"] = [[schub]];
+G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["Text"] = [[script hub]];
+G2L["15"]["Position"] = UDim2.new(0.32976, 0, 0.23675, 0);
+
+
+-- StarterGui.tilehub v2.main.bframe.schub.UICorner
+G2L["16"] = Instance.new("UICorner", G2L["15"]);
+
+
+
+-- StarterGui.tilehub v2.main.bframe.schub.UIAspectRatioConstraint
+G2L["17"] = Instance.new("UIAspectRatioConstraint", G2L["15"]);
+G2L["17"]["AspectRatio"] = 4.16;
+
+
+-- StarterGui.tilehub v2.main.bframe.UIListLayout
+G2L["18"] = Instance.new("UIListLayout", G2L["f"]);
+G2L["18"]["HorizontalFlex"] = Enum.UIFlexAlignment.SpaceAround;
+G2L["18"]["VerticalFlex"] = Enum.UIFlexAlignment.SpaceAround;
+G2L["18"]["Padding"] = UDim.new(0, 4);
+G2L["18"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
+G2L["18"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["18"]["FillDirection"] = Enum.FillDirection.Horizontal;
+
+
+-- StarterGui.tilehub v2.main.bframe.bh
+G2L["19"] = Instance.new("TextButton", G2L["f"]);
+G2L["19"]["TextWrapped"] = true;
+G2L["19"]["TextStrokeTransparency"] = 0;
+G2L["19"]["BorderSizePixel"] = 0;
+G2L["19"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["19"]["TextSize"] = 14;
+G2L["19"]["TextScaled"] = true;
+G2L["19"]["BackgroundColor3"] = Color3.fromRGB(14, 14, 14);
+G2L["19"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["19"]["ZIndex"] = 2;
+G2L["19"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["19"]["Size"] = UDim2.new(0.18364, 0, 0.87069, 0);
+G2L["19"]["Name"] = [[bh]];
+G2L["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["19"]["Text"] = [[black hole]];
+G2L["19"]["Position"] = UDim2.new(0.22651, 0, 2.3428, 0);
+
+
+-- StarterGui.tilehub v2.main.bframe.bh.UICorner
+G2L["1a"] = Instance.new("UICorner", G2L["19"]);
+
+
+
+-- StarterGui.tilehub v2.main.bframe.bh.UIAspectRatioConstraint
+G2L["1b"] = Instance.new("UIAspectRatioConstraint", G2L["19"]);
+G2L["1b"]["AspectRatio"] = 4.16;
+
+
+-- StarterGui.tilehub v2.main.bframe.settings
+G2L["1c"] = Instance.new("TextButton", G2L["f"]);
+G2L["1c"]["TextWrapped"] = true;
+G2L["1c"]["TextStrokeTransparency"] = 0;
+G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1c"]["TextSize"] = 14;
+G2L["1c"]["TextScaled"] = true;
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(14, 14, 14);
+G2L["1c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["1c"]["ZIndex"] = 2;
+G2L["1c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["1c"]["Size"] = UDim2.new(0.18364, 0, 0.87069, 0);
+G2L["1c"]["Name"] = [[settings]];
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["Text"] = [[settings]];
+G2L["1c"]["Position"] = UDim2.new(0.22651, 0, 2.3428, 0);
+
+
+-- StarterGui.tilehub v2.main.bframe.settings.UICorner
+G2L["1d"] = Instance.new("UICorner", G2L["1c"]);
+
+
+
+-- StarterGui.tilehub v2.main.bframe.settings.UIAspectRatioConstraint
+G2L["1e"] = Instance.new("UIAspectRatioConstraint", G2L["1c"]);
+G2L["1e"]["AspectRatio"] = 4.16;
+
+
+-- StarterGui.tilehub v2.main.games
+G2L["1f"] = Instance.new("Frame", G2L["2"]);
+G2L["1f"]["Visible"] = false;
+G2L["1f"]["BorderSizePixel"] = 0;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["1f"]["Size"] = UDim2.new(0.97771, 0, 0.93493, 0);
+G2L["1f"]["Position"] = UDim2.new(0.49827, 0, 0.50685, 0);
+G2L["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["Name"] = [[games]];
+G2L["1f"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.tilehub v2.main.games.washiez
+G2L["20"] = Instance.new("ScrollingFrame", G2L["1f"]);
+G2L["20"]["Visible"] = false;
+G2L["20"]["Active"] = true;
+G2L["20"]["BorderSizePixel"] = 0;
+G2L["20"]["BackgroundColor3"] = Color3.fromRGB(14, 14, 14);
+G2L["20"]["Name"] = [[washiez]];
+G2L["20"]["Size"] = UDim2.new(1.00136, 0, 0.71684, 0);
+G2L["20"]["Position"] = UDim2.new(0.00064, 0, 0.13104, 0);
+G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.tilehub v2.main.games.washiez.UIListLayout
+G2L["21"] = Instance.new("UIListLayout", G2L["20"]);
+G2L["21"]["Padding"] = UDim.new(0.02, 0);
+G2L["21"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.tilehub v2.main.games.washiez.maplabel
+G2L["22"] = Instance.new("TextLabel", G2L["20"]);
+G2L["22"]["TextWrapped"] = true;
+G2L["22"]["BorderSizePixel"] = 0;
+G2L["22"]["TextSize"] = 14;
+G2L["22"]["TextScaled"] = true;
+G2L["22"]["BackgroundColor3"] = Color3.fromRGB(25, 24, 24);
+G2L["22"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Italic);
+G2L["22"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["22"]["Size"] = UDim2.new(0, 200, 0, 24);
+G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["Text"] = [[map ]];
+G2L["22"]["Name"] = [[maplabel]];
+G2L["22"]["Position"] = UDim2.new(-0.01059, 0, -0.13034, 0);
+
+
+-- StarterGui.tilehub v2.main.games.washiez.maplabel.UICorner
+G2L["23"] = Instance.new("UICorner", G2L["22"]);
+
+
+
+-- StarterGui.tilehub v2.main.games.washiez.deletemap
+G2L["24"] = Instance.new("TextButton", G2L["20"]);
+G2L["24"]["TextWrapped"] = true;
+G2L["24"]["BorderSizePixel"] = 0;
+G2L["24"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["TextSize"] = 14;
+G2L["24"]["TextScaled"] = true;
+G2L["24"]["BackgroundColor3"] = Color3.fromRGB(25, 24, 24);
+G2L["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["24"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["24"]["Size"] = UDim2.new(0, 200, 0, 34);
+G2L["24"]["LayoutOrder"] = 1;
+G2L["24"]["Name"] = [[deletemap]];
+G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["Text"] = [[Delete Carwash Walls]];
+G2L["24"]["Position"] = UDim2.new(0.17648, 0, 0.17742, 0);
+
+
+-- StarterGui.tilehub v2.main.games.washiez.deletemap.UICorner
+G2L["25"] = Instance.new("UICorner", G2L["24"]);
+
+
+
+-- StarterGui.tilehub v2.main.games.washiez.deletemap.TextLabel
+G2L["26"] = Instance.new("TextLabel", G2L["24"]);
+G2L["26"]["TextWrapped"] = true;
+G2L["26"]["TextStrokeTransparency"] = 0;
+G2L["26"]["BorderSizePixel"] = 0;
+G2L["26"]["TextSize"] = 14;
+G2L["26"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["26"]["TextScaled"] = true;
+G2L["26"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["26"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["26"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["26"]["BackgroundTransparency"] = 1;
+G2L["26"]["Size"] = UDim2.new(0, 322, 0, 34);
+G2L["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["26"]["Text"] = [[Deletes the carwash walls so you could ram cars without being blocked by anything.\]];
+G2L["26"]["Position"] = UDim2.new(1.1, 0, 0, 0);
+
+
+-- StarterGui.tilehub v2.main.games.UIAspectRatioConstraint
+G2L["27"] = Instance.new("UIAspectRatioConstraint", G2L["1f"]);
+G2L["27"]["AspectRatio"] = 2.18084;
+
+
+-- StarterGui.tilehub v2.main.games.tau
+G2L["28"] = Instance.new("ScrollingFrame", G2L["1f"]);
+G2L["28"]["Visible"] = false;
+G2L["28"]["Active"] = true;
+G2L["28"]["BorderSizePixel"] = 0;
+G2L["28"]["CanvasSize"] = UDim2.new(0, 0, 5, 0);
+G2L["28"]["BackgroundColor3"] = Color3.fromRGB(14, 14, 14);
+G2L["28"]["Name"] = [[tau]];
+G2L["28"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["28"]["Size"] = UDim2.new(1.00136, 0, 0.71684, 0);
+G2L["28"]["Position"] = UDim2.new(0.50196, 0, 0.4968, 0);
+G2L["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["28"]["ScrollBarThickness"] = 10;
+
+
+-- StarterGui.tilehub v2.main.games.tau.UIListLayout
+G2L["29"] = Instance.new("UIListLayout", G2L["28"]);
+G2L["29"]["Padding"] = UDim.new(0.02, 1);
+G2L["29"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.tilehub v2.main.games.tau.teleportslabel
+G2L["2a"] = Instance.new("TextLabel", G2L["28"]);
+G2L["2a"]["TextWrapped"] = true;
+G2L["2a"]["BorderSizePixel"] = 0;
+G2L["2a"]["TextSize"] = 14;
+G2L["2a"]["TextScaled"] = true;
+G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(73, 70, 70);
+G2L["2a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Italic);
+G2L["2a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2a"]["Size"] = UDim2.new(0.378, 0, 0.025, 0);
+G2L["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2a"]["Text"] = [[teleports]];
+G2L["2a"]["Name"] = [[teleportslabel]];
+G2L["2a"]["Position"] = UDim2.new(-0.01059, 0, -0.13034, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.teleportslabel.UICorner
+G2L["2b"] = Instance.new("UICorner", G2L["2a"]);
+
+
+
+-- StarterGui.tilehub v2.main.games.tau.shelter
+G2L["2c"] = Instance.new("TextButton", G2L["28"]);
+G2L["2c"]["TextWrapped"] = true;
+G2L["2c"]["BorderSizePixel"] = 0;
+G2L["2c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2c"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2c"]["TextSize"] = 14;
+G2L["2c"]["TextScaled"] = true;
+G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(25, 24, 24);
+G2L["2c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["2c"]["Size"] = UDim2.new(0.378, 0, 0.035, 0);
+G2L["2c"]["LayoutOrder"] = 1;
+G2L["2c"]["Name"] = [[shelter]];
+G2L["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2c"]["Text"] = [[shelter]];
+G2L["2c"]["Position"] = UDim2.new(99.16306, 0, 0.42743, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.shelter.UICorner
+G2L["2d"] = Instance.new("UICorner", G2L["2c"]);
+
+
+
+-- StarterGui.tilehub v2.main.games.tau.shelter.TextLabel
+G2L["2e"] = Instance.new("TextLabel", G2L["2c"]);
+G2L["2e"]["TextWrapped"] = true;
+G2L["2e"]["TextStrokeTransparency"] = 0;
+G2L["2e"]["BorderSizePixel"] = 0;
+G2L["2e"]["TextSize"] = 14;
+G2L["2e"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2e"]["TextScaled"] = true;
+G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["2e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["BackgroundTransparency"] = 1;
+G2L["2e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["2e"]["Size"] = UDim2.new(1.61, 0, 0.91176, 0);
+G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["Text"] = [[teleports you to the shelter.]];
+G2L["2e"]["Position"] = UDim2.new(1.83879, 0, 0.48882, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.shelter.TextLabel.UIAspectRatioConstraint
+G2L["2f"] = Instance.new("UIAspectRatioConstraint", G2L["2e"]);
+G2L["2f"]["AspectRatio"] = 10.3871;
+
+
+-- StarterGui.tilehub v2.main.games.tau.items
+G2L["30"] = Instance.new("TextLabel", G2L["28"]);
+G2L["30"]["TextWrapped"] = true;
+G2L["30"]["BorderSizePixel"] = 0;
+G2L["30"]["TextSize"] = 14;
+G2L["30"]["TextScaled"] = true;
+G2L["30"]["BackgroundColor3"] = Color3.fromRGB(73, 70, 70);
+G2L["30"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Italic);
+G2L["30"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["30"]["Size"] = UDim2.new(0.378, 0, 0.025, 0);
+G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["30"]["Text"] = [[items]];
+G2L["30"]["LayoutOrder"] = 5;
+G2L["30"]["Name"] = [[items]];
+G2L["30"]["Position"] = UDim2.new(-0.01059, 0, -0.13034, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.items.UICorner
+G2L["31"] = Instance.new("UICorner", G2L["30"]);
+
+
+
+-- StarterGui.tilehub v2.main.games.tau.items.UIAspectRatioConstraint
+G2L["32"] = Instance.new("UIAspectRatioConstraint", G2L["30"]);
+G2L["32"]["AspectRatio"] = 8.33333;
+
+
+-- StarterGui.tilehub v2.main.games.tau.bat
+G2L["33"] = Instance.new("TextButton", G2L["28"]);
+G2L["33"]["TextWrapped"] = true;
+G2L["33"]["BorderSizePixel"] = 0;
+G2L["33"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["33"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["33"]["TextSize"] = 14;
+G2L["33"]["TextScaled"] = true;
+G2L["33"]["BackgroundColor3"] = Color3.fromRGB(25, 24, 24);
+G2L["33"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["33"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["33"]["Size"] = UDim2.new(0.378, 0, 0.035, 0);
+G2L["33"]["LayoutOrder"] = 7;
+G2L["33"]["Name"] = [[bat]];
+G2L["33"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["33"]["Text"] = [[bat]];
+G2L["33"]["Position"] = UDim2.new(0.17648, 0, 0.17742, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.bat.UICorner
+G2L["34"] = Instance.new("UICorner", G2L["33"]);
+
+
+
+-- StarterGui.tilehub v2.main.games.tau.bat.TextLabel
+G2L["35"] = Instance.new("TextLabel", G2L["33"]);
+G2L["35"]["TextWrapped"] = true;
+G2L["35"]["TextStrokeTransparency"] = 0;
+G2L["35"]["BorderSizePixel"] = 0;
+G2L["35"]["TextSize"] = 14;
+G2L["35"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["35"]["TextScaled"] = true;
+G2L["35"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["35"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["35"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["35"]["BackgroundTransparency"] = 1;
+G2L["35"]["Size"] = UDim2.new(1.61, 0, 0.91176, 0);
+G2L["35"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["35"]["Text"] = [[grabs a bat from the map.]];
+G2L["35"]["Position"] = UDim2.new(1.06906, 0, 0.02941, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.bat.TextLabel.UIAspectRatioConstraint
+G2L["36"] = Instance.new("UIAspectRatioConstraint", G2L["35"]);
+G2L["36"]["AspectRatio"] = 10.3871;
+
+
+-- StarterGui.tilehub v2.main.games.tau.bat.UIAspectRatioConstraint
+G2L["37"] = Instance.new("UIAspectRatioConstraint", G2L["33"]);
+G2L["37"]["AspectRatio"] = 5.88235;
+
+
+-- StarterGui.tilehub v2.main.games.tau.fireextinguisher
+G2L["38"] = Instance.new("TextButton", G2L["28"]);
+G2L["38"]["TextWrapped"] = true;
+G2L["38"]["BorderSizePixel"] = 0;
+G2L["38"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["38"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["38"]["TextSize"] = 14;
+G2L["38"]["TextScaled"] = true;
+G2L["38"]["BackgroundColor3"] = Color3.fromRGB(25, 24, 24);
+G2L["38"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["38"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["38"]["Size"] = UDim2.new(0.378, 0, 0.035, 0);
+G2L["38"]["LayoutOrder"] = 8;
+G2L["38"]["Name"] = [[fireextinguisher]];
+G2L["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["38"]["Text"] = [[fire extinguisher]];
+G2L["38"]["Position"] = UDim2.new(0.17648, 0, 0.17742, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.fireextinguisher.UICorner
+G2L["39"] = Instance.new("UICorner", G2L["38"]);
+
+
+
+-- StarterGui.tilehub v2.main.games.tau.fireextinguisher.TextLabel
+G2L["3a"] = Instance.new("TextLabel", G2L["38"]);
+G2L["3a"]["TextWrapped"] = true;
+G2L["3a"]["TextStrokeTransparency"] = 0;
+G2L["3a"]["BorderSizePixel"] = 0;
+G2L["3a"]["TextSize"] = 14;
+G2L["3a"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3a"]["TextScaled"] = true;
+G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["3a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3a"]["BackgroundTransparency"] = 1;
+G2L["3a"]["Size"] = UDim2.new(1.61, 0, 0.91176, 0);
+G2L["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3a"]["Text"] = [[grabs a fire extinguisher from the map.]];
+G2L["3a"]["Position"] = UDim2.new(1.1, 0, 0.02941, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.fireextinguisher.TextLabel.UIAspectRatioConstraint
+G2L["3b"] = Instance.new("UIAspectRatioConstraint", G2L["3a"]);
+G2L["3b"]["AspectRatio"] = 10.3871;
+
+
+-- StarterGui.tilehub v2.main.games.tau.fireextinguisher.UIAspectRatioConstraint
+G2L["3c"] = Instance.new("UIAspectRatioConstraint", G2L["38"]);
+G2L["3c"]["AspectRatio"] = 5.88235;
+
+
+-- StarterGui.tilehub v2.main.games.tau.idol
+G2L["3d"] = Instance.new("TextButton", G2L["28"]);
+G2L["3d"]["TextWrapped"] = true;
+G2L["3d"]["BorderSizePixel"] = 0;
+G2L["3d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3d"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3d"]["TextSize"] = 14;
+G2L["3d"]["TextScaled"] = true;
+G2L["3d"]["BackgroundColor3"] = Color3.fromRGB(25, 24, 24);
+G2L["3d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["3d"]["Size"] = UDim2.new(0.378, 0, 0.035, 0);
+G2L["3d"]["LayoutOrder"] = 9;
+G2L["3d"]["Name"] = [[idol]];
+G2L["3d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3d"]["Text"] = [[idol]];
+G2L["3d"]["Position"] = UDim2.new(0.17648, 0, 0.17742, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.idol.UICorner
+G2L["3e"] = Instance.new("UICorner", G2L["3d"]);
+
+
+
+-- StarterGui.tilehub v2.main.games.tau.idol.TextLabel
+G2L["3f"] = Instance.new("TextLabel", G2L["3d"]);
+G2L["3f"]["TextWrapped"] = true;
+G2L["3f"]["TextStrokeTransparency"] = 0;
+G2L["3f"]["BorderSizePixel"] = 0;
+G2L["3f"]["TextSize"] = 14;
+G2L["3f"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3f"]["TextScaled"] = true;
+G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["3f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3f"]["BackgroundTransparency"] = 1;
+G2L["3f"]["Size"] = UDim2.new(1.61, 0, 0.91176, 0);
+G2L["3f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3f"]["Text"] = [[grabs a idol from the map.]];
+G2L["3f"]["Position"] = UDim2.new(1.1, 0, 0.02941, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.idol.TextLabel.UIAspectRatioConstraint
+G2L["40"] = Instance.new("UIAspectRatioConstraint", G2L["3f"]);
+G2L["40"]["AspectRatio"] = 10.3871;
+
+
+-- StarterGui.tilehub v2.main.games.tau.idol.UIAspectRatioConstraint
+G2L["41"] = Instance.new("UIAspectRatioConstraint", G2L["3d"]);
+G2L["41"]["AspectRatio"] = 5.88235;
+
+
+-- StarterGui.tilehub v2.main.games.tau.cursedidol
+G2L["42"] = Instance.new("TextButton", G2L["28"]);
+G2L["42"]["TextWrapped"] = true;
+G2L["42"]["BorderSizePixel"] = 0;
+G2L["42"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["42"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["42"]["TextSize"] = 14;
+G2L["42"]["TextScaled"] = true;
+G2L["42"]["BackgroundColor3"] = Color3.fromRGB(25, 24, 24);
+G2L["42"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["42"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["42"]["Size"] = UDim2.new(0.378, 0, 0.035, 0);
+G2L["42"]["LayoutOrder"] = 10;
+G2L["42"]["Name"] = [[cursedidol]];
+G2L["42"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["42"]["Text"] = [[cursed idol]];
+G2L["42"]["Position"] = UDim2.new(0.17648, 0, 0.17742, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.cursedidol.UICorner
+G2L["43"] = Instance.new("UICorner", G2L["42"]);
+
+
+
+-- StarterGui.tilehub v2.main.games.tau.cursedidol.TextLabel
+G2L["44"] = Instance.new("TextLabel", G2L["42"]);
+G2L["44"]["TextWrapped"] = true;
+G2L["44"]["TextStrokeTransparency"] = 0;
+G2L["44"]["BorderSizePixel"] = 0;
+G2L["44"]["TextSize"] = 14;
+G2L["44"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["44"]["TextScaled"] = true;
+G2L["44"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["44"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["44"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["44"]["BackgroundTransparency"] = 1;
+G2L["44"]["Size"] = UDim2.new(1.61, 0, 0.91176, 0);
+G2L["44"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["44"]["Text"] = [[grabs a cursed idol from the map.]];
+G2L["44"]["Position"] = UDim2.new(1.03296, 0, 0.02941, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.cursedidol.TextLabel.UIAspectRatioConstraint
+G2L["45"] = Instance.new("UIAspectRatioConstraint", G2L["44"]);
+G2L["45"]["AspectRatio"] = 10.3871;
+
+
+-- StarterGui.tilehub v2.main.games.tau.cursedidol.UIAspectRatioConstraint
+G2L["46"] = Instance.new("UIAspectRatioConstraint", G2L["42"]);
+G2L["46"]["AspectRatio"] = 5.88235;
+
+
+-- StarterGui.tilehub v2.main.games.tau.ancienttext
+G2L["47"] = Instance.new("TextButton", G2L["28"]);
+G2L["47"]["TextWrapped"] = true;
+G2L["47"]["BorderSizePixel"] = 0;
+G2L["47"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["47"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["47"]["TextSize"] = 14;
+G2L["47"]["TextScaled"] = true;
+G2L["47"]["BackgroundColor3"] = Color3.fromRGB(25, 24, 24);
+G2L["47"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["47"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["47"]["Size"] = UDim2.new(0.378, 0, 0.035, 0);
+G2L["47"]["LayoutOrder"] = 11;
+G2L["47"]["Name"] = [[ancienttext]];
+G2L["47"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["47"]["Text"] = [[ancient text]];
+G2L["47"]["Position"] = UDim2.new(0.17648, 0, 0.17742, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.ancienttext.UICorner
+G2L["48"] = Instance.new("UICorner", G2L["47"]);
+
+
+
+-- StarterGui.tilehub v2.main.games.tau.ancienttext.TextLabel
+G2L["49"] = Instance.new("TextLabel", G2L["47"]);
+G2L["49"]["TextWrapped"] = true;
+G2L["49"]["TextStrokeTransparency"] = 0;
+G2L["49"]["BorderSizePixel"] = 0;
+G2L["49"]["TextSize"] = 14;
+G2L["49"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["49"]["TextScaled"] = true;
+G2L["49"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["49"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["49"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["49"]["BackgroundTransparency"] = 1;
+G2L["49"]["Size"] = UDim2.new(1.61, 0, 0.91176, 0);
+G2L["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["49"]["Text"] = [[grabs a ancient text from the map.]];
+G2L["49"]["Position"] = UDim2.new(1.00202, 0, 0.02941, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.ancienttext.TextLabel.UIAspectRatioConstraint
+G2L["4a"] = Instance.new("UIAspectRatioConstraint", G2L["49"]);
+G2L["4a"]["AspectRatio"] = 10.3871;
+
+
+-- StarterGui.tilehub v2.main.games.tau.ancienttext.UIAspectRatioConstraint
+G2L["4b"] = Instance.new("UIAspectRatioConstraint", G2L["47"]);
+G2L["4b"]["AspectRatio"] = 5.88235;
+
+
+-- StarterGui.tilehub v2.main.games.tau.auto
+G2L["4c"] = Instance.new("TextLabel", G2L["28"]);
+G2L["4c"]["TextWrapped"] = true;
+G2L["4c"]["BorderSizePixel"] = 0;
+G2L["4c"]["TextSize"] = 14;
+G2L["4c"]["TextScaled"] = true;
+G2L["4c"]["BackgroundColor3"] = Color3.fromRGB(73, 70, 70);
+G2L["4c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Italic);
+G2L["4c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4c"]["Size"] = UDim2.new(0.378, 0, 0.025, 0);
+G2L["4c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4c"]["Text"] = [[auto]];
+G2L["4c"]["LayoutOrder"] = 12;
+G2L["4c"]["Name"] = [[auto]];
+G2L["4c"]["Position"] = UDim2.new(-0.01059, 0, -0.13034, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.auto.UICorner
+G2L["4d"] = Instance.new("UICorner", G2L["4c"]);
+
+
+
+-- StarterGui.tilehub v2.main.games.tau.auto.UIAspectRatioConstraint
+G2L["4e"] = Instance.new("UIAspectRatioConstraint", G2L["4c"]);
+G2L["4e"]["AspectRatio"] = 8.33333;
+
+
+-- StarterGui.tilehub v2.main.games.tau.autoshelter
+G2L["4f"] = Instance.new("TextButton", G2L["28"]);
+G2L["4f"]["TextWrapped"] = true;
+G2L["4f"]["BorderSizePixel"] = 0;
+G2L["4f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4f"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4f"]["TextSize"] = 14;
+G2L["4f"]["TextScaled"] = true;
+G2L["4f"]["BackgroundColor3"] = Color3.fromRGB(121, 0, 0);
+G2L["4f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["4f"]["Size"] = UDim2.new(0.378, 0, 0.035, 0);
+G2L["4f"]["LayoutOrder"] = 13;
+G2L["4f"]["Name"] = [[autoshelter]];
+G2L["4f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4f"]["Text"] = [[auto shelter]];
+G2L["4f"]["Position"] = UDim2.new(0.17648, 0, 0.17742, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.autoshelter.UICorner
+G2L["50"] = Instance.new("UICorner", G2L["4f"]);
+
+
+
+-- StarterGui.tilehub v2.main.games.tau.autoshelter.TextLabel
+G2L["51"] = Instance.new("TextLabel", G2L["4f"]);
+G2L["51"]["TextWrapped"] = true;
+G2L["51"]["TextStrokeTransparency"] = 0;
+G2L["51"]["BorderSizePixel"] = 0;
+G2L["51"]["TextSize"] = 14;
+G2L["51"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["51"]["TextScaled"] = true;
+G2L["51"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["51"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["51"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["51"]["BackgroundTransparency"] = 1;
+G2L["51"]["Size"] = UDim2.new(1.61, 0, 0.91176, 0);
+G2L["51"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["51"]["Text"] = [[loop teleports you to above the shelter(auto farm)]];
+G2L["51"]["Position"] = UDim2.new(0.99711, 0, 0.02941, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.autoshelter.TextLabel.UIAspectRatioConstraint
+G2L["52"] = Instance.new("UIAspectRatioConstraint", G2L["51"]);
+G2L["52"]["AspectRatio"] = 10.3871;
+
+
+-- StarterGui.tilehub v2.main.games.tau.autofragment
+G2L["53"] = Instance.new("TextButton", G2L["28"]);
+G2L["53"]["TextWrapped"] = true;
+G2L["53"]["BorderSizePixel"] = 0;
+G2L["53"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["53"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["53"]["TextSize"] = 14;
+G2L["53"]["TextScaled"] = true;
+G2L["53"]["BackgroundColor3"] = Color3.fromRGB(121, 0, 0);
+G2L["53"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["53"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["53"]["Size"] = UDim2.new(0.378, 0, 0.035, 0);
+G2L["53"]["LayoutOrder"] = 14;
+G2L["53"]["Name"] = [[autofragment]];
+G2L["53"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["53"]["Text"] = [[auto pickup fragments]];
+G2L["53"]["Position"] = UDim2.new(0.17648, 0, 0.17742, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.autofragment.UICorner
+G2L["54"] = Instance.new("UICorner", G2L["53"]);
+
+
+
+-- StarterGui.tilehub v2.main.games.tau.autofragment.TextLabel
+G2L["55"] = Instance.new("TextLabel", G2L["53"]);
+G2L["55"]["TextWrapped"] = true;
+G2L["55"]["TextStrokeTransparency"] = 0;
+G2L["55"]["BorderSizePixel"] = 0;
+G2L["55"]["TextSize"] = 14;
+G2L["55"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["55"]["TextScaled"] = true;
+G2L["55"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["55"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["55"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["55"]["BackgroundTransparency"] = 1;
+G2L["55"]["Size"] = UDim2.new(1.61, 0, 0.91176, 0);
+G2L["55"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["55"]["Text"] = [[automatically picks up fragments.]];
+G2L["55"]["Position"] = UDim2.new(1.03812, 0, 0.02941, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.autofragment.TextLabel.UIAspectRatioConstraint
+G2L["56"] = Instance.new("UIAspectRatioConstraint", G2L["55"]);
+G2L["56"]["AspectRatio"] = 10.3871;
+
+
+-- StarterGui.tilehub v2.main.games.tau.autofragment.UIAspectRatioConstraint
+G2L["57"] = Instance.new("UIAspectRatioConstraint", G2L["53"]);
+G2L["57"]["AspectRatio"] = 5.88235;
+
+
+-- StarterGui.tilehub v2.main.games.tau.autoglasses
+G2L["58"] = Instance.new("TextButton", G2L["28"]);
+G2L["58"]["TextWrapped"] = true;
+G2L["58"]["BorderSizePixel"] = 0;
+G2L["58"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["58"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["58"]["TextSize"] = 14;
+G2L["58"]["TextScaled"] = true;
+G2L["58"]["BackgroundColor3"] = Color3.fromRGB(121, 0, 0);
+G2L["58"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["58"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["58"]["Size"] = UDim2.new(0.378, 0, 0.035, 0);
+G2L["58"]["LayoutOrder"] = 14;
+G2L["58"]["Name"] = [[autoglasses]];
+G2L["58"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["58"]["Text"] = [[auto pickup chad glasses]];
+G2L["58"]["Position"] = UDim2.new(0.17648, 0, 0.17742, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.autoglasses.UICorner
+G2L["59"] = Instance.new("UICorner", G2L["58"]);
+
+
+
+-- StarterGui.tilehub v2.main.games.tau.autoglasses.TextLabel
+G2L["5a"] = Instance.new("TextLabel", G2L["58"]);
+G2L["5a"]["TextWrapped"] = true;
+G2L["5a"]["TextStrokeTransparency"] = 0;
+G2L["5a"]["BorderSizePixel"] = 0;
+G2L["5a"]["TextSize"] = 14;
+G2L["5a"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5a"]["TextScaled"] = true;
+G2L["5a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["5a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5a"]["BackgroundTransparency"] = 1;
+G2L["5a"]["Size"] = UDim2.new(1.61, 0, 0.91176, 0);
+G2L["5a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5a"]["Text"] = [[automatically picks up chads sunglasses.]];
+G2L["5a"]["Position"] = UDim2.new(1.00202, 0, 0.02941, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.autoglasses.TextLabel.UIAspectRatioConstraint
+G2L["5b"] = Instance.new("UIAspectRatioConstraint", G2L["5a"]);
+G2L["5b"]["AspectRatio"] = 10.3871;
+
+
+-- StarterGui.tilehub v2.main.games.tau.autoglasses.UIAspectRatioConstraint
+G2L["5c"] = Instance.new("UIAspectRatioConstraint", G2L["58"]);
+G2L["5c"]["AspectRatio"] = 5.88235;
+
+
+-- StarterGui.tilehub v2.main.games.tau.UIAspectRatioConstraint
+G2L["5d"] = Instance.new("UIAspectRatioConstraint", G2L["28"]);
+G2L["5d"]["AspectRatio"] = 3.04643;
+
+
+-- StarterGui.tilehub v2.main.games.tau.shelterkey
+G2L["5e"] = Instance.new("TextButton", G2L["28"]);
+G2L["5e"]["TextWrapped"] = true;
+G2L["5e"]["BorderSizePixel"] = 0;
+G2L["5e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5e"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5e"]["TextSize"] = 14;
+G2L["5e"]["TextScaled"] = true;
+G2L["5e"]["BackgroundColor3"] = Color3.fromRGB(25, 24, 24);
+G2L["5e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["5e"]["Size"] = UDim2.new(0.378, 0, 0.035, 0);
+G2L["5e"]["LayoutOrder"] = 6;
+G2L["5e"]["Name"] = [[shelterkey]];
+G2L["5e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5e"]["Text"] = [[shelter key]];
+G2L["5e"]["Position"] = UDim2.new(0.17648, 0, 0.17742, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.shelterkey.UICorner
+G2L["5f"] = Instance.new("UICorner", G2L["5e"]);
+
+
+
+-- StarterGui.tilehub v2.main.games.tau.shelterkey.TextLabel
+G2L["60"] = Instance.new("TextLabel", G2L["5e"]);
+G2L["60"]["TextWrapped"] = true;
+G2L["60"]["TextStrokeTransparency"] = 0;
+G2L["60"]["BorderSizePixel"] = 0;
+G2L["60"]["TextSize"] = 14;
+G2L["60"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["60"]["TextScaled"] = true;
+G2L["60"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["60"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["60"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["60"]["BackgroundTransparency"] = 1;
+G2L["60"]["Size"] = UDim2.new(1.61, 0, 0.91176, 0);
+G2L["60"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["60"]["Text"] = [[gets a shelter key from the map.]];
+G2L["60"]["Position"] = UDim2.new(1.03812, 0, 0.02941, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.shelterkey.TextLabel.UIAspectRatioConstraint
+G2L["61"] = Instance.new("UIAspectRatioConstraint", G2L["60"]);
+G2L["61"]["AspectRatio"] = 10.3871;
+
+
+-- StarterGui.tilehub v2.main.games.tau.shelterkey.UIAspectRatioConstraint
+G2L["62"] = Instance.new("UIAspectRatioConstraint", G2L["5e"]);
+G2L["62"]["AspectRatio"] = 5.88235;
+
+
+-- StarterGui.tilehub v2.main.games.tau.spawn
+G2L["63"] = Instance.new("TextButton", G2L["28"]);
+G2L["63"]["TextWrapped"] = true;
+G2L["63"]["BorderSizePixel"] = 0;
+G2L["63"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["63"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["63"]["TextSize"] = 14;
+G2L["63"]["TextScaled"] = true;
+G2L["63"]["BackgroundColor3"] = Color3.fromRGB(25, 24, 24);
+G2L["63"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["63"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["63"]["Size"] = UDim2.new(0.378, 0, 0.035, 0);
+G2L["63"]["LayoutOrder"] = 3;
+G2L["63"]["Name"] = [[spawn]];
+G2L["63"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["63"]["Text"] = [[spawn]];
+G2L["63"]["Position"] = UDim2.new(0.17648, 0, 0.17742, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.spawn.UICorner
+G2L["64"] = Instance.new("UICorner", G2L["63"]);
+
+
+
+-- StarterGui.tilehub v2.main.games.tau.spawn.TextLabel
+G2L["65"] = Instance.new("TextLabel", G2L["63"]);
+G2L["65"]["TextWrapped"] = true;
+G2L["65"]["TextStrokeTransparency"] = 0;
+G2L["65"]["BorderSizePixel"] = 0;
+G2L["65"]["TextSize"] = 14;
+G2L["65"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["65"]["TextScaled"] = true;
+G2L["65"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["65"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["65"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["65"]["BackgroundTransparency"] = 1;
+G2L["65"]["Size"] = UDim2.new(1.61, 0, 0.91176, 0);
+G2L["65"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["65"]["Text"] = [[teleports you to the spawn.]];
+G2L["65"]["Position"] = UDim2.new(1.03812, 0, 0.02941, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.spawn.TextLabel.UIAspectRatioConstraint
+G2L["66"] = Instance.new("UIAspectRatioConstraint", G2L["65"]);
+G2L["66"]["AspectRatio"] = 10.3871;
+
+
+-- StarterGui.tilehub v2.main.games.tau.spawn.UIAspectRatioConstraint
+G2L["67"] = Instance.new("UIAspectRatioConstraint", G2L["63"]);
+G2L["67"]["AspectRatio"] = 5.88235;
+
+
+-- StarterGui.tilehub v2.main.games.tau.jail
+G2L["68"] = Instance.new("TextButton", G2L["28"]);
+G2L["68"]["TextWrapped"] = true;
+G2L["68"]["BorderSizePixel"] = 0;
+G2L["68"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["68"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["68"]["TextSize"] = 14;
+G2L["68"]["TextScaled"] = true;
+G2L["68"]["BackgroundColor3"] = Color3.fromRGB(25, 24, 24);
+G2L["68"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["68"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["68"]["Size"] = UDim2.new(0.378, 0, 0.035, 0);
+G2L["68"]["LayoutOrder"] = 4;
+G2L["68"]["Name"] = [[jail]];
+G2L["68"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["68"]["Text"] = [[jail]];
+G2L["68"]["Position"] = UDim2.new(0.17648, 0, 0.17742, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.jail.UICorner
+G2L["69"] = Instance.new("UICorner", G2L["68"]);
+
+
+
+-- StarterGui.tilehub v2.main.games.tau.jail.TextLabel
+G2L["6a"] = Instance.new("TextLabel", G2L["68"]);
+G2L["6a"]["TextWrapped"] = true;
+G2L["6a"]["TextStrokeTransparency"] = 0;
+G2L["6a"]["BorderSizePixel"] = 0;
+G2L["6a"]["TextSize"] = 14;
+G2L["6a"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6a"]["TextScaled"] = true;
+G2L["6a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["6a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6a"]["BackgroundTransparency"] = 1;
+G2L["6a"]["Size"] = UDim2.new(1.61, 0, 0.91176, 0);
+G2L["6a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6a"]["Text"] = [[teleports you to the the jail cell.]];
+G2L["6a"]["Position"] = UDim2.new(1.00202, 0, 0.02941, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.jail.TextLabel.UIAspectRatioConstraint
+G2L["6b"] = Instance.new("UIAspectRatioConstraint", G2L["6a"]);
+G2L["6b"]["AspectRatio"] = 10.3871;
+
+
+-- StarterGui.tilehub v2.main.games.tau.jail.UIAspectRatioConstraint
+G2L["6c"] = Instance.new("UIAspectRatioConstraint", G2L["68"]);
+G2L["6c"]["AspectRatio"] = 5.88235;
+
+
+-- StarterGui.tilehub v2.main.games.tau.map
+G2L["6d"] = Instance.new("TextButton", G2L["28"]);
+G2L["6d"]["TextWrapped"] = true;
+G2L["6d"]["BorderSizePixel"] = 0;
+G2L["6d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6d"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6d"]["TextSize"] = 14;
+G2L["6d"]["TextScaled"] = true;
+G2L["6d"]["BackgroundColor3"] = Color3.fromRGB(25, 24, 24);
+G2L["6d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["6d"]["Size"] = UDim2.new(0.378, 0, 0.035, 0);
+G2L["6d"]["LayoutOrder"] = 2;
+G2L["6d"]["Name"] = [[map]];
+G2L["6d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6d"]["Text"] = [[map]];
+G2L["6d"]["Position"] = UDim2.new(0.17648, 0, 0.17742, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.map.UICorner
+G2L["6e"] = Instance.new("UICorner", G2L["6d"]);
+
+
+
+-- StarterGui.tilehub v2.main.games.tau.map.TextLabel
+G2L["6f"] = Instance.new("TextLabel", G2L["6d"]);
+G2L["6f"]["TextWrapped"] = true;
+G2L["6f"]["TextStrokeTransparency"] = 0;
+G2L["6f"]["BorderSizePixel"] = 0;
+G2L["6f"]["TextSize"] = 14;
+G2L["6f"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6f"]["TextScaled"] = true;
+G2L["6f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["6f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6f"]["BackgroundTransparency"] = 1;
+G2L["6f"]["Size"] = UDim2.new(1.61, 0, 0.91176, 0);
+G2L["6f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6f"]["Text"] = [[teleports you to the map.]];
+G2L["6f"]["Position"] = UDim2.new(1.03812, 0, 0.02941, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.map.TextLabel.UIAspectRatioConstraint
+G2L["70"] = Instance.new("UIAspectRatioConstraint", G2L["6f"]);
+G2L["70"]["AspectRatio"] = 10.3871;
+
+
+-- StarterGui.tilehub v2.main.games.tau.map.UIAspectRatioConstraint
+G2L["71"] = Instance.new("UIAspectRatioConstraint", G2L["6d"]);
+G2L["71"]["AspectRatio"] = 5.88235;
+
+
+-- StarterGui.tilehub v2.main.games.tau.esp
+G2L["72"] = Instance.new("TextLabel", G2L["28"]);
+G2L["72"]["TextWrapped"] = true;
+G2L["72"]["BorderSizePixel"] = 0;
+G2L["72"]["TextSize"] = 14;
+G2L["72"]["TextScaled"] = true;
+G2L["72"]["BackgroundColor3"] = Color3.fromRGB(73, 70, 70);
+G2L["72"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Italic);
+G2L["72"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["72"]["Size"] = UDim2.new(0.378, 0, 0.025, 0);
+G2L["72"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["72"]["Text"] = [[esp]];
+G2L["72"]["LayoutOrder"] = 15;
+G2L["72"]["Name"] = [[esp]];
+G2L["72"]["Position"] = UDim2.new(-0.01059, 0, -0.13034, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.esp.UICorner
+G2L["73"] = Instance.new("UICorner", G2L["72"]);
+
+
+
+-- StarterGui.tilehub v2.main.games.tau.esp.UIAspectRatioConstraint
+G2L["74"] = Instance.new("UIAspectRatioConstraint", G2L["72"]);
+G2L["74"]["AspectRatio"] = 8.33333;
+
+
+-- StarterGui.tilehub v2.main.games.tau.itemesp
+G2L["75"] = Instance.new("TextButton", G2L["28"]);
+G2L["75"]["TextWrapped"] = true;
+G2L["75"]["BorderSizePixel"] = 0;
+G2L["75"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["75"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["75"]["TextSize"] = 14;
+G2L["75"]["TextScaled"] = true;
+G2L["75"]["BackgroundColor3"] = Color3.fromRGB(121, 0, 0);
+G2L["75"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["75"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["75"]["Size"] = UDim2.new(0.378, 0, 0.035, 0);
+G2L["75"]["LayoutOrder"] = 16;
+G2L["75"]["Name"] = [[itemesp]];
+G2L["75"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["75"]["Text"] = [[items esp]];
+G2L["75"]["Position"] = UDim2.new(0.17648, 0, 0.17742, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.itemesp.UICorner
+G2L["76"] = Instance.new("UICorner", G2L["75"]);
+
+
+
+-- StarterGui.tilehub v2.main.games.tau.itemesp.TextLabel
+G2L["77"] = Instance.new("TextLabel", G2L["75"]);
+G2L["77"]["TextWrapped"] = true;
+G2L["77"]["TextStrokeTransparency"] = 0;
+G2L["77"]["BorderSizePixel"] = 0;
+G2L["77"]["TextSize"] = 14;
+G2L["77"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["77"]["TextScaled"] = true;
+G2L["77"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["77"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["77"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["77"]["BackgroundTransparency"] = 1;
+G2L["77"]["Size"] = UDim2.new(1.61, 0, 0.91176, 0);
+G2L["77"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["77"]["Text"] = [[enables esp for items around the map.]];
+G2L["77"]["Position"] = UDim2.new(1.00202, 0, 0.02941, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.itemesp.TextLabel.UIAspectRatioConstraint
+G2L["78"] = Instance.new("UIAspectRatioConstraint", G2L["77"]);
+G2L["78"]["AspectRatio"] = 10.3871;
+
+
+-- StarterGui.tilehub v2.main.games.tau.itemesp.UIAspectRatioConstraint
+G2L["79"] = Instance.new("UIAspectRatioConstraint", G2L["75"]);
+G2L["79"]["AspectRatio"] = 5.88235;
+
+
+-- StarterGui.tilehub v2.main.games.tau.shelteresp
+G2L["7a"] = Instance.new("TextButton", G2L["28"]);
+G2L["7a"]["TextWrapped"] = true;
+G2L["7a"]["BorderSizePixel"] = 0;
+G2L["7a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7a"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7a"]["TextSize"] = 14;
+G2L["7a"]["TextScaled"] = true;
+G2L["7a"]["BackgroundColor3"] = Color3.fromRGB(121, 0, 0);
+G2L["7a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7a"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["7a"]["Size"] = UDim2.new(0.378, 0, 0.035, 0);
+G2L["7a"]["LayoutOrder"] = 16;
+G2L["7a"]["Name"] = [[shelteresp]];
+G2L["7a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7a"]["Text"] = [[shelter esp]];
+G2L["7a"]["Position"] = UDim2.new(0.17648, 0, 0.17742, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.shelteresp.UICorner
+G2L["7b"] = Instance.new("UICorner", G2L["7a"]);
+
+
+
+-- StarterGui.tilehub v2.main.games.tau.shelteresp.TextLabel
+G2L["7c"] = Instance.new("TextLabel", G2L["7a"]);
+G2L["7c"]["TextWrapped"] = true;
+G2L["7c"]["TextStrokeTransparency"] = 0;
+G2L["7c"]["BorderSizePixel"] = 0;
+G2L["7c"]["TextSize"] = 14;
+G2L["7c"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7c"]["TextScaled"] = true;
+G2L["7c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["7c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7c"]["BackgroundTransparency"] = 1;
+G2L["7c"]["Size"] = UDim2.new(1.61, 0, 0.91176, 0);
+G2L["7c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7c"]["Text"] = [[enables esp for finding the underground shelter.]];
+G2L["7c"]["Position"] = UDim2.new(1.00202, 0, 0.02941, 0);
+
+
+-- StarterGui.tilehub v2.main.games.tau.shelteresp.TextLabel.UIAspectRatioConstraint
+G2L["7d"] = Instance.new("UIAspectRatioConstraint", G2L["7c"]);
+G2L["7d"]["AspectRatio"] = 10.3871;
+
+
+-- StarterGui.tilehub v2.main.games.tau.shelteresp.UIAspectRatioConstraint
+G2L["7e"] = Instance.new("UIAspectRatioConstraint", G2L["7a"]);
+G2L["7e"]["AspectRatio"] = 5.88235;
+
+
+-- StarterGui.tilehub v2.main.scriphub
+G2L["7f"] = Instance.new("Frame", G2L["2"]);
+G2L["7f"]["Visible"] = false;
+G2L["7f"]["BorderSizePixel"] = 0;
+G2L["7f"]["BackgroundColor3"] = Color3.fromRGB(14, 14, 14);
+G2L["7f"]["Size"] = UDim2.new(0.97739, 0, 0.72157, 0);
+G2L["7f"]["Position"] = UDim2.new(0.01248, 0, 0.14134, 0);
+G2L["7f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7f"]["Name"] = [[scriphub]];
+
+
+-- StarterGui.tilehub v2.main.scriphub.ScrollingFrame
+G2L["80"] = Instance.new("ScrollingFrame", G2L["7f"]);
+G2L["80"]["Active"] = true;
+G2L["80"]["BorderSizePixel"] = 0;
+G2L["80"]["BackgroundColor3"] = Color3.fromRGB(14, 14, 14);
+G2L["80"]["Size"] = UDim2.new(0.99635, 0, 0.89691, 0);
+G2L["80"]["Position"] = UDim2.new(0, 0, 0.06186, 0);
+G2L["80"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.tilehub v2.main.scriphub.ScrollingFrame.infyield
+G2L["81"] = Instance.new("ImageButton", G2L["80"]);
+G2L["81"]["BorderSizePixel"] = 0;
+G2L["81"]["ScaleType"] = Enum.ScaleType.Fit;
+G2L["81"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["81"]["Image"] = [[http://www.roblox.com/asset/?id=124032169069973]];
+G2L["81"]["Size"] = UDim2.new(0.23537, 0, 0.30947, 0);
+G2L["81"]["BackgroundTransparency"] = 1;
+G2L["81"]["Name"] = [[infyield]];
+G2L["81"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["81"]["Position"] = UDim2.new(0, 0, -1.22989, 0);
+
+
+-- StarterGui.tilehub v2.main.scriphub.ScrollingFrame.infyield.TextLabel
+G2L["82"] = Instance.new("TextLabel", G2L["81"]);
+G2L["82"]["TextWrapped"] = true;
+G2L["82"]["TextStrokeTransparency"] = 0;
+G2L["82"]["BorderSizePixel"] = 0;
+G2L["82"]["TextSize"] = 14;
+G2L["82"]["TextScaled"] = true;
+G2L["82"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["82"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["82"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["82"]["BackgroundTransparency"] = 1;
+G2L["82"]["Size"] = UDim2.new(3.09449, 0, 0.66839, 0);
+G2L["82"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["82"]["Text"] = [[fe admin script with over 400+ commands!]];
+G2L["82"]["Position"] = UDim2.new(1.01665, 0, 0.16164, 0);
+
+
+-- StarterGui.tilehub v2.main.scriphub.ScrollingFrame.UIAspectRatioConstraint
+G2L["83"] = Instance.new("UIAspectRatioConstraint", G2L["80"]);
+G2L["83"]["AspectRatio"] = 3.13793;
+
+
+-- StarterGui.tilehub v2.main.scriphub.ScrollingFrame.UIListLayout
+G2L["84"] = Instance.new("UIListLayout", G2L["80"]);
+G2L["84"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.tilehub v2.main.scriphub.UIAspectRatioConstraint
+G2L["85"] = Instance.new("UIAspectRatioConstraint", G2L["7f"]);
+G2L["85"]["AspectRatio"] = 2.82474;
+
+
+-- StarterGui.tilehub v2.main.UIDragDetector
+G2L["86"] = Instance.new("UIDragDetector", G2L["2"]);
+
+
+
+-- StarterGui.tilehub v2.loading
+G2L["87"] = Instance.new("Frame", G2L["1"]);
+G2L["87"]["BorderSizePixel"] = 0;
+G2L["87"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
+G2L["87"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["87"]["Size"] = UDim2.new(2.355, 0, 3.63017, 0);
+G2L["87"]["Position"] = UDim2.new(7.5, 0, 0.5, 0);
+G2L["87"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["87"]["Name"] = [[loading]];
+G2L["87"]["BackgroundTransparency"] = 0.25;
+
+
+-- StarterGui.tilehub v2.loading.ImageLabel
+G2L["88"] = Instance.new("ImageLabel", G2L["87"]);
+G2L["88"]["BorderSizePixel"] = 0;
+G2L["88"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["88"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["88"]["Image"] = [[rbxassetid://126475741439172]];
+G2L["88"]["Size"] = UDim2.new(0.10616, 0, 0.13405, 0);
+G2L["88"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["88"]["BackgroundTransparency"] = 1;
+G2L["88"]["Position"] = UDim2.new(0.44586, 0, 0.5, 0);
+
+
+-- StarterGui.tilehub v2.loading.ImageLabel.UIAspectRatioConstraint
+G2L["89"] = Instance.new("UIAspectRatioConstraint", G2L["88"]);
+
+
+
+-- StarterGui.tilehub v2.loading.Frame
+G2L["8a"] = Instance.new("Frame", G2L["87"]);
+G2L["8a"]["BorderSizePixel"] = 0;
+G2L["8a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8a"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["8a"]["Size"] = UDim2.new(0.00212, 0, 0.08579, 0);
+G2L["8a"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["8a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.tilehub v2.loading.Frame.UIAspectRatioConstraint
+G2L["8b"] = Instance.new("UIAspectRatioConstraint", G2L["8a"]);
+G2L["8b"]["AspectRatio"] = 0.03125;
+
+
+-- StarterGui.tilehub v2.loading.TextLabel
+G2L["8c"] = Instance.new("TextLabel", G2L["87"]);
+G2L["8c"]["TextWrapped"] = true;
+G2L["8c"]["TextStrokeTransparency"] = 0;
+G2L["8c"]["BorderSizePixel"] = 0;
+G2L["8c"]["TextSize"] = 14;
+G2L["8c"]["TextScaled"] = true;
+G2L["8c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8c"]["BackgroundTransparency"] = 1;
+G2L["8c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["8c"]["Size"] = UDim2.new(0.13641, 0, 0.04088, 0);
+G2L["8c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8c"]["Text"] = [[tilehub v2]];
+G2L["8c"]["Position"] = UDim2.new(0.56714, 0, 0.49966, 0);
+
+
+-- StarterGui.tilehub v2.loading.TextLabel.UIAspectRatioConstraint
+G2L["8d"] = Instance.new("UIAspectRatioConstraint", G2L["8c"]);
+G2L["8d"]["AspectRatio"] = 4.21311;
+
+
+-- StarterGui.tilehub v2.loading.UIAspectRatioConstraint
+G2L["8e"] = Instance.new("UIAspectRatioConstraint", G2L["87"]);
+G2L["8e"]["AspectRatio"] = 1.26273;
+
+
+-- StarterGui.tilehub v2.LocalScript
+G2L["8f"] = Instance.new("LocalScript", G2L["1"]);
+
+
+
+-- StarterGui.tilehub v2.floaicon
+G2L["90"] = Instance.new("Frame", G2L["1"]);
+G2L["90"]["Visible"] = false;
+G2L["90"]["BorderSizePixel"] = 0;
+G2L["90"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["90"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["90"]["Size"] = UDim2.new(0, 100, 0, 100);
+G2L["90"]["Position"] = UDim2.new(0.5, 0, 0.12165, 0);
+G2L["90"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["90"]["Name"] = [[floaicon]];
+G2L["90"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.tilehub v2.floaicon.ImageButton
+G2L["91"] = Instance.new("ImageButton", G2L["90"]);
+G2L["91"]["BorderSizePixel"] = 0;
+G2L["91"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["91"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["91"]["Image"] = [[http://www.roblox.com/asset/?id=126475741439172]];
+G2L["91"]["Size"] = UDim2.new(0, 100, 0, 100);
+G2L["91"]["BackgroundTransparency"] = 1;
+G2L["91"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["91"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- StarterGui.tilehub v2.LocalScript
+local function C_8f()
+local script = G2L["8f"];
+	-- Get the services
+	local TweenService = game:GetService("TweenService")
+	local frame = script.Parent.loading -- Assuming the script is a child of the Frame
+	local main = script.Parent.main
+	local close = script.Parent.main.mainframe.close
+	local openbuttonframe = script.Parent.floaicon
+	local open = script.Parent.floaicon.ImageButton
+	local targetPosition = UDim2.new(0.5, 0, 0.5, 0) -- Center of the screen without offset
+	local sPosition = UDim2.new(-4.5, 0, 0.5, 0) -- Center of the screen without offset
+	local ePosition = UDim2.new(4.5, 0, 0.5, 0) -- Center of the screen without offset
+	local gamebutton = script.Parent.main.bframe.game
+	local scripthubbutton = script.Parent.main.bframe.schub
+	local games = script.Parent.main.games
+	local color2 = Color3.fromRGB(53, 120, 41) -- Second color
+	local color1 = Color3.fromRGB(120, 0, 0) -- First color
+	local scripthub = main.scriphub
+	--teleports
+	local autoshelter = games.tau.autoshelter
+	local autoglasses = games.tau.autoglasses
+	local autofragment = games.tau.autofragment
+	local sheltertp = games.tau.shelter
+	local jailtp = games.tau.jail
+	local maptp = games.tau.map
+	local spawntp = games.tau.spawn
+	local shelterkeytp = games.tau.shelterkey
+	local idoltp = games.tau.idol
+	local cursedidoltp = games.tau.cursedidol
+	local battp = games.tau.bat
+	local fireextinguishertp = games.tau.fireextinguisher
+	local ancienttext = games.tau.ancienttext
+	--esp
+	local itemespbtn = games.tau.itemesp
+	local shelteresp = games.tau.shelteresp
+	--scripts
+	local infyield = scripthub.ScrollingFrame.infyield
+	frame.Position = sPosition
+	wait(1)
+	-- Define the target position and tweening properties
+	local tweenInfo = TweenInfo.new(
+		2, -- Time (1 second)
+		Enum.EasingStyle.Quad, -- Easing style
+		Enum.EasingDirection.Out, -- Easing direction
+		0, -- Times to repeat (0 means no repeat)
+		false, -- Reverses (false means it won't reverse)
+		0 -- Delay time
+	)
+	
+	-- Create the tween
+	local tween = TweenService:Create(frame, tweenInfo, {Position = targetPosition})
+	
+	-- Play the tween
+	tween:Play()
+	
+	
+	wait(4)
+	
+	
+	-- Define the target position and tweening properties
+	local tweenInfo = TweenInfo.new(
+		2, -- Time (1 second)
+		Enum.EasingStyle.Quad, -- Easing style
+		Enum.EasingDirection.Out, -- Easing direction
+		0, -- Times to repeat (0 means no repeat)
+		false, -- Reverses (false means it won't reverse)
+		0 -- Delay time
+	)
+	
+	-- Create the tween
+	local tween = TweenService:Create(frame, tweenInfo, {Position = ePosition})
+	
+	-- Play the tween
+	tween:Play()
+	
+	wait(1)
+	main.Position = sPosition
+	-- Define the target position and tweening properties
+	local tweenInfo = TweenInfo.new(
+		2, -- Time (1 second)
+		Enum.EasingStyle.Quad, -- Easing style
+		Enum.EasingDirection.InOut, -- Easing direction
+		0, -- Times to repeat (0 means no repeat)
+		false, -- Reverses (false means it won't reverse)
+		0 -- Delay time
+	)
+	
+	-- Create the tween
+	local tween = TweenService:Create(main, tweenInfo, {Position = targetPosition})
+	
+	-- Play the tween
+	tween:Play()
+	wait(1)
+	frame.Visible = false
+	main.Visible = true
+	scripthub.Visible = true
+	open.Draggable = true
+	
+	
+	close.MouseButton1Click:Connect(function()
+		-- Define the target position and tweening properties
+		local tweenInfo = TweenInfo.new(
+			2, -- Time (1 second)
+			Enum.EasingStyle.Quad, -- Easing style
+			Enum.EasingDirection.InOut, -- Easing direction
+			0, -- Times to repeat (0 means no repeat)
+			false, -- Reverses (false means it won't reverse)
+			0 -- Delay time
+		)
+	
+		-- Create the tween
+		local tween = TweenService:Create(main, tweenInfo, {Position = sPosition})
+	
+		-- Play the tween
+		tween:Play()
+		wait(1)
+		openbuttonframe.Visible = true
+	end)
+	
+	open.MouseButton1Click:Connect(function()
+		openbuttonframe.Visible = false
+		-- Define the target position and tweening properties
+		local tweenInfo = TweenInfo.new(
+			2, -- Time (1 second)
+			Enum.EasingStyle.Quad, -- Easing style
+			Enum.EasingDirection.InOut, -- Easing direction
+			0, -- Times to repeat (0 means no repeat)
+			false, -- Reverses (false means it won't reverse)
+			0 -- Delay time
+		)
+	
+		-- Create the tween
+		local tween = TweenService:Create(main, tweenInfo, {Position = targetPosition})
+	
+		-- Play the tween
+		tween:Play()
+	end)
+	
+	local function checkautoshelterColor()
+		while true do
+			-- Define the name of the part you want to check/create
+			local partName = "farm"
+	
+			-- Function to check if the part exists
+			local function checkAndCreatePart()
+				-- Check if the part already exists in the Workspace
+				local existingPart = workspace:FindFirstChild(partName)
+	
+				if existingPart then
+				else
+					-- Create a new part
+					local newPart = Instance.new("Part")
+					newPart.Name = partName
+					newPart.Size = Vector3.new(7, 1, 7) -- Set the size of the part
+					newPart.Position = Vector3.new(75496.5, 31942, -95) -- Set the position of the part
+					newPart.Anchored = true -- Make sure the part is anchored
+					newPart.Parent = workspace 
+				end
+			end
+			wait(7)
+			local Players = game:GetService("Players")
+	
+			-- Wait for the LocalPlayer to be available
+			while not Players.LocalPlayer do
+				wait()
+			end
+	
+			local player = Players.LocalPlayer
+			local character
+	
+			-- Define the target position
+			local targetPosition = Vector3.new(75496.5, 31945, -95)
+	
+			-- Function to teleport the player
+			local function teleportPlayer()
+				if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+					player.Character.HumanoidRootPart.CFrame = CFrame.new(targetPosition)
+				end
+			end
+			local targetColor
+			if autoshelter.BackgroundColor3 == color1 then
+			else
+				teleportPlayer()
+				checkAndCreatePart()
+			end
+		end
+	end
+	
+	
+	autoshelter.MouseButton1Click:Connect(function()
+	-- Define the colors
+	-- Define the tweening properties
+		local tweenInfo = TweenInfo.new(
+			0.25, -- Time (in seconds) for the tween to complete
+			Enum.EasingStyle.Quad, -- Easing style
+			Enum.EasingDirection.Out -- Easing direction
+		)
+	
+		-- Function to toggle the button color with tweening
+		local function autosheltercheck()
+			local targetColor
+			if autoshelter.BackgroundColor3 == color1 then
+				targetColor = color2
+			else
+				targetColor = color1
+			end
+	
+			local colorTween = TweenService:Create(autoshelter, tweenInfo, {BackgroundColor3 = targetColor})
+			colorTween:Play()
+		end
+		autosheltercheck()
+	end)
+	
+	sheltertp.MouseButton1Click:Connect(function()
+		local Players = game:GetService("Players")
+	
+		-- Wait for the LocalPlayer to be available
+		while not Players.LocalPlayer do
+			wait()
+		end
+	
+		local player = Players.LocalPlayer
+		local character
+	
+		-- Define the target position
+		local targetPosition = Vector3.new(75490, 31957.059, -137)
+	
+		-- Function to teleport the player
+		local function teleportPlayer()
+			if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+				player.Character.HumanoidRootPart.CFrame = CFrame.new(targetPosition)
+			end
+		end
+		teleportPlayer()
+	end)
+	
+	idoltp.MouseButton1Click:Connect(function()
+		local function teleportToIdol()
+			local Players = game:GetService("Players")
+	
+			-- Wait for the LocalPlayer to be available
+			while not Players.LocalPlayer do
+				wait()
+			end
+	
+			local player = Players.LocalPlayer
+			local character
+			-- Find the MeshPart named "Idol"
+			local idol = workspace:FindFirstChild("Idol")
+	
+			-- Check if the part exists
+			if idol and idol:IsA("MeshPart") then
+				-- Set the character's position to the part's position
+				player.Character:SetPrimaryPartCFrame(idol.CFrame)
+			else
+			end
+		end
+		-- Function to fire a ProximityPrompt
+		local function fireProximityPromptInIdol()
+			-- Get the MeshPart named "idol" from the workspace
+			local idol = workspace:FindFirstChild("Idol")
+	
+			-- Check if the idol exists and is a MeshPart
+			if idol and idol:IsA("MeshPart") then
+				-- Iterate through the descendants of the idol
+				for _, descendant in ipairs(idol:GetDescendants()) do
+					-- Check if the descendant is a ProximityPrompt
+					if descendant:IsA("ProximityPrompt") then
+						-- Fire the ProximityPrompt
+						fireproximityprompt(descendant)
+						return -- Exit after firing the first found ProximityPrompt
+					end
+				end
+			else
+			end
+		end
+	
+		-- Call the function to fire the ProximityPrompt
+		teleportToIdol()
+		fireProximityPromptInIdol()
+	end)
+	
+	cursedidoltp.MouseButton1Click:Connect(function()
+		local function teleportTocursedIdol()
+			local Players = game:GetService("Players")
+	
+			-- Wait for the LocalPlayer to be available
+			while not Players.LocalPlayer do
+				wait()
+			end
+	
+			local player = Players.LocalPlayer
+			local character
+			-- Find the MeshPart named "Idol"
+			local cursedidol = workspace:FindFirstChild("Cursed Idol")
+	
+			-- Check if the part exists
+			if cursedidol and cursedidol:IsA("MeshPart") then
+				-- Set the character's position to the part's position
+				player.Character:SetPrimaryPartCFrame(cursedidol.CFrame)
+			else
+			end
+		end
+		-- Function to fire a ProximityPrompt
+		local function fireProximityPromptIncursedIdol()
+			-- Get the MeshPart named "idol" from the workspace
+			local cursedidol = workspace:FindFirstChild("Cursed Idol")
+	
+			-- Check if the idol exists and is a MeshPart
+			if cursedidol and cursedidol:IsA("MeshPart") then
+				-- Iterate through the descendants of the idol
+				for _, descendant in ipairs(cursedidol:GetDescendants()) do
+					-- Check if the descendant is a ProximityPrompt
+					if descendant:IsA("ProximityPrompt") then
+						-- Fire the ProximityPrompt
+						fireproximityprompt(descendant)
+						return -- Exit after firing the first found ProximityPrompt
+					end
+				end
+			else
+			end
+		end
+	
+		-- Call the function to fire the ProximityPrompt
+		teleportTocursedIdol()
+		fireProximityPromptIncursedIdol()
+	end)
+	
+	battp.MouseButton1Click:Connect(function()
+		local function teleportTobat()
+			local Players = game:GetService("Players")
+	
+			-- Wait for the LocalPlayer to be available
+			while not Players.LocalPlayer do
+				wait()
+			end
+	
+			local player = Players.LocalPlayer
+			local character
+			-- Find the MeshPart named "Idol"
+			local bat = workspace:FindFirstChild("Bat")
+	
+			-- Check if the part exists
+			if bat and bat:IsA("MeshPart") then
+				-- Set the character's position to the part's position
+				player.Character:SetPrimaryPartCFrame(bat.CFrame)
+			else
+			end
+		end
+		-- Function to fire a ProximityPrompt
+		local function fireProximityPromptInbat()
+			-- Get the MeshPart named "idol" from the workspace
+			local bat = workspace:FindFirstChild("Bat")
+	
+			-- Check if the idol exists and is a MeshPart
+			if bat and bat:IsA("MeshPart") then
+				-- Iterate through the descendants of the idol
+				for _, descendant in ipairs(bat:GetDescendants()) do
+					-- Check if the descendant is a ProximityPrompt
+					if descendant:IsA("ProximityPrompt") then
+						-- Fire the ProximityPrompt
+						fireproximityprompt(descendant)
+						return -- Exit after firing the first found ProximityPrompt
+					end
+				end
+			else
+			end
+		end
+	
+		-- Call the function to fire the ProximityPrompt
+		teleportTobat()
+		fireProximityPromptInbat()
+	end)
+	
+	fireextinguishertp.MouseButton1Click:Connect(function()
+		local function teleportTofireex()
+			local Players = game:GetService("Players")
+	
+			-- Wait for the LocalPlayer to be available
+			while not Players.LocalPlayer do
+				wait()
+			end
+	
+			local player = Players.LocalPlayer
+			local character
+			-- Find the MeshPart named "Idol"
+			local fireex = workspace:FindFirstChild("Fire Extinguisher")
+	
+			-- Check if the part exists
+			if fireex and fireex:IsA("MeshPart") then
+				-- Set the character's position to the part's position
+				player.Character:SetPrimaryPartCFrame(fireex.CFrame)
+			else
+			end
+		end
+		-- Function to fire a ProximityPrompt
+		local function fireProximityPromptfireex()
+			-- Get the MeshPart named "idol" from the workspace
+			local fireex = workspace:FindFirstChild("Fire Extinguisher")
+	
+			-- Check if the idol exists and is a MeshPart
+			if fireex and fireex:IsA("MeshPart") then
+				-- Iterate through the descendants of the idol
+				for _, descendant in ipairs(fireex:GetDescendants()) do
+					-- Check if the descendant is a ProximityPrompt
+					if descendant:IsA("ProximityPrompt") then
+						-- Fire the ProximityPrompt
+						fireproximityprompt(descendant)
+						return -- Exit after firing the first found ProximityPrompt
+					end
+				end
+			else
+			end
+		end
+	
+		-- Call the function to fire the ProximityPrompt
+		teleportTofireex()
+		fireProximityPromptfireex()
+	end)
+	
+	jailtp.MouseButton1Click:Connect(function()
+		local Players = game:GetService("Players")
+	
+		-- Wait for the LocalPlayer to be available
+		while not Players.LocalPlayer do
+			wait()
+		end
+	
+		local player = Players.LocalPlayer
+		local character
+	
+		-- Define the target position
+		local targetPosition = Vector3.new(103683.906, 31952.664, -138.783)
+	
+		-- Function to teleport the player
+		local function teleportPlayer()
+			if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+				player.Character.HumanoidRootPart.CFrame = CFrame.new(targetPosition)
+			end
+		end
+		teleportPlayer()
+	end)
+	
+	spawntp.MouseButton1Click:Connect(function()
+		local Players = game:GetService("Players")
+	
+		-- Wait for the LocalPlayer to be available
+		while not Players.LocalPlayer do
+			wait()
+		end
+	
+		local player = Players.LocalPlayer
+		local character
+	
+		-- Define the target position
+		local targetPosition = Vector3.new(-9238.001, 32031, -194)
+	
+		-- Function to teleport the player
+		local function teleportPlayer()
+			if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+				player.Character.HumanoidRootPart.CFrame = CFrame.new(targetPosition)
+			end
+		end
+		teleportPlayer()
+	end)
+	
+	maptp.MouseButton1Click:Connect(function()
+		local Players = game:GetService("Players")
+	
+		-- Wait for the LocalPlayer to be available
+		while not Players.LocalPlayer do
+			wait()
+		end
+	
+		local player = Players.LocalPlayer
+		local character
+	
+		-- Define the target position
+		local targetPosition = Vector3.new(-147, 55.5, -390)
+	
+		-- Function to teleport the player
+		local function teleportPlayer()
+			if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+				player.Character.HumanoidRootPart.CFrame = CFrame.new(targetPosition)
+			end
+		end
+		teleportPlayer()
+	end)
+	
+	
+	
+	autofragment.MouseButton1Click:Connect(function()
+		-- Define the colors
+		-- Define the tweening properties
+		local tweenInfo = TweenInfo.new(
+			0.25, -- Time (in seconds) for the tween to complete
+			Enum.EasingStyle.Quad, -- Easing style
+			Enum.EasingDirection.Out -- Easing direction
+		)
+	
+		-- Function to toggle the button color with tweening
+		local function autofragmentcheck()
+			local targetColor
+			if autofragment.BackgroundColor3 == color1 then
+				targetColor = color2
+			else
+				targetColor = color1
+			end
+	
+			local colorTween = TweenService:Create(autofragment, tweenInfo, {BackgroundColor3 = targetColor})
+			colorTween:Play()
+		end
+		autofragmentcheck()
+	end)
+	
+	
+	
+	local function checkautofragmentcolor()
+		local function teleporttofragment()
+			local Players = game:GetService("Players")
+	
+			-- Wait for the LocalPlayer to be available
+			while not Players.LocalPlayer do
+				wait()
+			end
+	
+			local player = Players.LocalPlayer
+			local character
+			-- Find the MeshPart named "Idol"
+			local frag = workspace:FindFirstChild("Blood Moon Fragment")
+	
+			-- Check if the part exists
+			if frag and frag:IsA("MeshPart") then
+				-- Set the character's position to the part's position
+				player.Character:SetPrimaryPartCFrame(frag.CFrame)
+			else
+			end
+		end
+		-- Function to fire a ProximityPrompt
+		local function fireProximityPromptInfrag()
+			-- Get the MeshPart named "idol" from the workspace
+			local fragm = workspace:FindFirstChild("Blood Moon Fragment")
+	
+			-- Check if the idol exists and is a MeshPart
+			if fragm and fragm:IsA("MeshPart") then
+				-- Iterate through the descendants of the idol
+				for _, descendant in ipairs(fragm:GetDescendants()) do
+					-- Check if the descendant is a ProximityPrompt
+					if descendant:IsA("ProximityPrompt") then
+						-- Fire the ProximityPrompt
+						fireproximityprompt(descendant)
+						return -- Exit after firing the first found ProximityPrompt
+					end
+				end
+			else
+			end
+		end
+		while true do
+			wait(7)
+			local targetColor
+			if autofragment.BackgroundColor3 == color1 then
+			else
+				-- Call the function to fire the ProximityPrompt
+				teleporttofragment()
+				fireProximityPromptInfrag()
+			end
+		end
+	end
+	
+	local function itemespstart()
+		-- List of parts and their corresponding text for the BillboardGuis
+		local partsList = {
+			{part = game.Workspace:FindFirstChild("Blood Moon Fragment"), text = "Blood Moon Fragment"},
+			{part = game.Workspace:FindFirstChild("Idol"), text = "Idol"},
+			{part = game.Workspace:FindFirstChild("Cursed Idol"), text = "Cursed Idol"},
+			{part = game.Workspace:FindFirstChild("Fire Extinguisher"), text = "Fire Extinguisher"},
+			{part = game.Workspace:FindFirstChild("Ancient Text"), text = "Ancient Text"},
+			{part = game.Workspace:FindFirstChild("Bat"), text = "Bat"},
+			{part = game.Workspace:FindFirstChild("Shelter Key"), text = "Shelter Key"},
+			{part = game.Workspace:FindFirstChild("Mysterious Sunglasses"), text = "Mysterious Sunglasses"},
+		}
+	
+		-- Function to create a BillboardGui for a part
+		local function createBillboardGui(part, text)
+			-- Check if a BillboardGui already exists on the part
+			for _, child in ipairs(part:GetChildren()) do
+				if child:IsA("BillboardGui") then
+					return -- Exit the function if a BillboardGui is found
+				end
+			end
+	
+			-- Create the BillboardGui
+			local billboardGui = Instance.new("BillboardGui")
+			billboardGui.Adornee = part
+			billboardGui.Size = UDim2.new(0, 100, 0, 100) -- Size of the BillboardGui
+			billboardGui.StudsOffset = Vector3.new(0, 0, 0) -- Offset above the part
+			billboardGui.AlwaysOnTop = true -- Always on top of other objects
+	
+			-- Create the TextLabel
+			local textLabel = Instance.new("TextLabel")
+			textLabel.Size = UDim2.new(0.5, 0, 0.5, 0) -- Fill the BillboardGui
+			textLabel.BackgroundTransparency = 1 -- Make background transparent
+			textLabel.Text = text -- Set the text to the specified value
+			textLabel.TextColor3 = Color3.new(1, 1, 1) -- White text
+			textLabel.TextScaled = true -- Scale text to fit
+			textLabel.Font = Enum.Font.Nunito -- Use Enum for font
+			textLabel.TextStrokeTransparency = 0
+	
+			textLabel.LayoutOrder = 1
+			local frame = Instance.new("Frame")
+			frame.Parent = billboardGui
+			frame.Size = UDim2.new(0.2, 0, 0.2, 0)
+			frame.BackgroundColor3 = Color3.fromRGB(58, 255, 14)
+			local corner = Instance.new("UICorner")
+			corner.Parent = frame
+			corner.CornerRadius = UDim.new(0, 100)
+	
+			-- Parent the BillboardGui to the part
+			billboardGui.Parent = part
+			textLabel.Parent = billboardGui -- Parent the TextLabel to the BillboardGui
+	
+			-- Function to offset the Frame's position
+			local function offsetFramePosition(offsetX, offsetY)
+				-- Offset the Frame's position directly
+				frame.Position = frame.Position + UDim2.new(0, offsetX, 0, offsetY)
+			end
+	
+			-- Example usage: Offset the Frame by 25 pixels to the right and 70 pixels down
+			offsetFramePosition(25, 50)
+		end
+	
+		-- Loop through the parts list and create BillboardGuis
+		for _, entry in ipairs(partsList) do
+			local part = entry.part
+			local text = entry.text
+	
+			-- Check if the part exists
+			if part then
+				if part:IsA("BasePart") then -- Ensure the object is a BasePart (includes MeshPart)
+					createBillboardGui(part, text)
+				else
+				end
+			else
+			end
+		end
+	end
+	
+	local function itemespstop()
+		-- List of parts to check for BillboardGuis
+		local partsList = {
+			{part = game.Workspace:FindFirstChild("Blood Moon Fragment"), text = "Blood Moon Fragment"},
+			{part = game.Workspace:FindFirstChild("Idol"), text = "Idol"},
+			{part = game.Workspace:FindFirstChild("Cursed Idol"), text = "Cursed Idol"},
+			{part = game.Workspace:FindFirstChild("Fire Extinguisher"), text = "Fire Extinguisher"},
+			{part = game.Workspace:FindFirstChild("Ancient Text"), text = "Ancient Text"},
+			{part = game.Workspace:FindFirstChild("Bat"), text = "Bat"},
+			{part = game.Workspace:FindFirstChild("Shelter Key"), text = "Shelter Key"},
+			{part = game.Workspace:FindFirstChild("Mysterious Sunglasses"), text = "Mysterious Sunglasses"},
+		}
+	
+		-- Function to check for and destroy a BillboardGui for a part
+		local function destroyBillboardGui(part)
+			-- Check if a BillboardGui exists on the part
+			for _, child in ipairs(part:GetChildren()) do
+				if child:IsA("BillboardGui") then
+					child:Destroy() -- Destroy the BillboardGui
+					return -- Exit the function after destroying
+				end
+			end
+		end
+	
+		-- Loop through the parts list and destroy BillboardGuis
+		for _, entry in ipairs(partsList) do
+			local part = entry.part
+	
+			-- Check if the part exists
+			if part then
+				if part:IsA("BasePart") then -- Ensure the object is a BasePart (includes MeshPart)
+					destroyBillboardGui(part)
+				else
+				end
+			else
+			end
+		end
+	end
+	
+	itemespbtn.MouseButton1Click:Connect(function()
+		-- Define the colors
+		-- Define the tweening properties
+		local tweenInfo = TweenInfo.new(
+			0.25, -- Time (in seconds) for the tween to complete
+			Enum.EasingStyle.Quad, -- Easing style
+			Enum.EasingDirection.Out -- Easing direction
+		)
+	
+		-- Function to toggle the button color with tweening
+		local function itemespcheckercheck()
+			local targetColor
+			if itemespbtn.BackgroundColor3 == color1 then
+				targetColor = color2
+				coroutine.wrap(itemespstart)()
+			else
+				targetColor = color1
+				coroutine.wrap(itemespstop)()
+			end
+	
+			local colorTween = TweenService:Create(itemespbtn, tweenInfo, {BackgroundColor3 = targetColor})
+			colorTween:Play()
+		end
+		itemespcheckercheck()
+	end)
+	
+	local function checkitemespcolor()
+		while true do
+			wait(7)
+			local targetColor
+			if itemespbtn.BackgroundColor3 == color1 then
+			else
+				coroutine.wrap(itemespstart)()
+			end
+		end
+	end
+	
+	gamebutton.MouseButton1Click:Connect(function()
+		-- Define a list of PlaceIds and their corresponding frame names
+		local placeFrames = {
+			[18762730436] = "tau", -- Replace with actual PlaceId and Frame names
+			[987654321] = "GameFrame2",
+			[112233445] = "GameFrame3",
+			-- Add more PlaceIds and corresponding Frame names as needed
+		}
+	
+		-- Get the current PlaceId
+		local currentPlaceId = game.PlaceId
+	
+		-- Function to show the corresponding frame based on PlaceId
+		local function showFrameForPlaceId()
+			-- Check if the current PlaceId exists in the list
+			local frameName = placeFrames[currentPlaceId]
+	
+			if frameName then
+				-- Find the frame in the specified path
+				local player = game.Players.LocalPlayer
+				local playerGui = player:WaitForChild("PlayerGui")
+				local mainGui = playerGui:WaitForChild("tilehub v2"):WaitForChild("main")
+				local gamesGui = mainGui:WaitForChild("games")
+				local frame = gamesGui:FindFirstChild(frameName)
+				gamesGui.Visible = true
+				scripthub.Visible = false
+				if frame then
+					frame.Visible = true -- Show the frame
+				else
+				end
+			else
+			end
+		end
+		-- Call the function to show the frame
+		showFrameForPlaceId()
+	end)
+	
+	scripthubbutton.MouseButton1Click:Connect(function()
+		games.Visible = false
+		scripthub.Visible = true
+	end)
+	
+	infyield.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+	end)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	local function shelterespstart()
+		-- List of parts and their corresponding text for the BillboardGuis
+		local partsList = {
+			{part = game.Workspace:FindFirstChild("BombShelter"), text = "Shelter"},
+		}
+	
+		-- Function to create a BillboardGui for a part
+		local function createBillboardGui(part, text)
+			-- Check if a BillboardGui already exists on the part
+			for _, child in ipairs(part:GetChildren()) do
+				if child:IsA("BillboardGui") then
+					return -- Exit the function if a BillboardGui is found
+				end
+			end
+	
+			-- Create the BillboardGui
+			local billboardGui = Instance.new("BillboardGui")
+			billboardGui.Adornee = part
+			billboardGui.Size = UDim2.new(0, 100, 0, 100) -- Size of the BillboardGui
+			billboardGui.StudsOffset = Vector3.new(0, 0, 0) -- Offset above the part
+			billboardGui.AlwaysOnTop = true -- Always on top of other objects
+	
+			-- Create the TextLabel
+			local textLabel = Instance.new("TextLabel")
+			textLabel.Size = UDim2.new(0.5, 0, 0.5, 0) -- Fill the BillboardGui
+			textLabel.BackgroundTransparency = 1 -- Make background transparent
+			textLabel.Text = text -- Set the text to the specified value
+			textLabel.TextColor3 = Color3.new(1, 1, 1) -- White text
+			textLabel.TextScaled = true -- Scale text to fit
+			textLabel.Font = Enum.Font.Nunito -- Use Enum for font
+			textLabel.TextStrokeTransparency = 0
+	
+			textLabel.LayoutOrder = 1
+			local frame = Instance.new("Frame")
+			frame.Parent = billboardGui
+			frame.Size = UDim2.new(0.2, 0, 0.2, 0)
+			frame.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+			local corner = Instance.new("UICorner")
+			corner.Parent = frame
+			corner.CornerRadius = UDim.new(0, 100)
+	
+			-- Parent the BillboardGui to the part
+			billboardGui.Parent = part
+			textLabel.Parent = billboardGui -- Parent the TextLabel to the BillboardGui
+	
+			-- Function to offset the Frame's position
+			local function offsetFramePosition(offsetX, offsetY)
+				-- Offset the Frame's position directly
+				frame.Position = frame.Position + UDim2.new(0, offsetX, 0, offsetY)
+			end
+	
+			-- Example usage: Offset the Frame by 25 pixels to the right and 70 pixels down
+			offsetFramePosition(25, 50)
+		end
+	
+		-- Loop through the parts list and create BillboardGuis
+		for _, entry in ipairs(partsList) do
+			local part = entry.part
+			local text = entry.text
+	
+			-- Check if the part exists
+			if part then
+				if part:IsA("Model") then -- Ensure the object is a BasePart (includes MeshPart)
+					createBillboardGui(part, text)
+				else
+				end
+			else
+			end
+		end
+	end
+	
+	local function shelterespstop()
+		-- List of parts to check for BillboardGuis
+		local partsList = {
+			{part = game.Workspace:FindFirstChild("BombShelter"), text = "Shelter"},
+		}
+	
+		-- Function to check for and destroy a BillboardGui for a part
+		local function destroyBillboardGui(part)
+			-- Check if a BillboardGui exists on the part
+			for _, child in ipairs(part:GetChildren()) do
+				if child:IsA("BillboardGui") then
+					child:Destroy() -- Destroy the BillboardGui
+					return -- Exit the function after destroying
+				end
+			end
+		end
+	
+		-- Loop through the parts list and destroy BillboardGuis
+		for _, entry in ipairs(partsList) do
+			local part = entry.part
+	
+			-- Check if the part exists
+			if part then
+				if part:IsA("Model") then -- Ensure the object is a BasePart (includes MeshPart)
+					destroyBillboardGui(part)
+				else
+				end
+			else
+			end
+		end
+	end
+	
+	shelteresp.MouseButton1Click:Connect(function()
+		-- Define the colors
+		-- Define the tweening properties
+		local tweenInfo = TweenInfo.new(
+			0.25, -- Time (in seconds) for the tween to complete
+			Enum.EasingStyle.Quad, -- Easing style
+			Enum.EasingDirection.Out -- Easing direction
+		)
+	
+		-- Function to toggle the button color with tweening
+		local function shelterespcheck()
+			local targetColor
+			if shelteresp.BackgroundColor3 == color1 then
+				targetColor = color2
+				coroutine.wrap(shelterespstart)()
+			else
+				targetColor = color1
+				coroutine.wrap(shelterespstop)()
+			end
+	
+			local colorTween = TweenService:Create(shelteresp, tweenInfo, {BackgroundColor3 = targetColor})
+			colorTween:Play()
+		end
+		shelterespcheck()
+	end)
+	
+	local function checkshelterespcolor()
+		while true do
+			wait(7)
+			local targetColor
+			if shelteresp.BackgroundColor3 == color1 then
+			else
+				coroutine.wrap(shelterespstart)()
+			end
+		end
+	end
+	
+	ancienttext.MouseButton1Click:Connect(function()
+		local function teleportTocancienttext()
+			local Players = game:GetService("Players")
+	
+			-- Wait for the LocalPlayer to be available
+			while not Players.LocalPlayer do
+				wait()
+			end
+	
+			local player = Players.LocalPlayer
+			local character
+			-- Find the MeshPart named "Idol"
+			local ancien = workspace:FindFirstChild("Ancient Text")
+	
+			-- Check if the part exists
+			if ancien and ancien:IsA("MeshPart") then
+				-- Set the character's position to the part's position
+				player.Character:SetPrimaryPartCFrame(ancien.CFrame)
+			else
+			end
+		end
+		-- Function to fire a ProximityPrompt
+		local function fireProximityPromptInancienttext()
+			-- Get the MeshPart named "idol" from the workspace
+			local ancien = workspace:FindFirstChild("Cursed Idol")
+	
+			-- Check if the idol exists and is a MeshPart
+			if ancien and ancien:IsA("MeshPart") then
+				-- Iterate through the descendants of the idol
+				for _, descendant in ipairs(ancien:GetDescendants()) do
+					-- Check if the descendant is a ProximityPrompt
+					if descendant:IsA("ProximityPrompt") then
+						-- Fire the ProximityPrompt
+						fireproximityprompt(descendant)
+						return -- Exit after firing the first found ProximityPrompt
+					end
+				end
+			else
+			end
+		end
+	
+		-- Call the function to fire the ProximityPrompt
+		teleportTocancienttext()
+		fireProximityPromptInancienttext()
+	end)
+	
+	shelterkeytp.MouseButton1Click:Connect(function()
+		local function teleportToshelterkey()
+			local Players = game:GetService("Players")
+	
+			-- Wait for the LocalPlayer to be available
+			while not Players.LocalPlayer do
+				wait()
+			end
+	
+			local player = Players.LocalPlayer
+			local character
+			-- Find the MeshPart named "Idol"
+			local shelterkey = workspace:FindFirstChild("Shelter Key")
+	
+			-- Check if the part exists
+			if shelterkey and shelterkey:IsA("MeshPart") then
+				-- Set the character's position to the part's position
+				player.Character:SetPrimaryPartCFrame(shelterkey.CFrame)
+			else
+			end
+		end
+		-- Function to fire a ProximityPrompt
+		local function fireProximityPromptInshelterkey()
+			-- Get the MeshPart named "idol" from the workspace
+			local shelterkey = workspace:FindFirstChild("Shelter Key")
+	
+			-- Check if the idol exists and is a MeshPart
+			if shelterkey and shelterkey:IsA("MeshPart") then
+				-- Iterate through the descendants of the idol
+				for _, descendant in ipairs(shelterkey:GetDescendants()) do
+					-- Check if the descendant is a ProximityPrompt
+					if descendant:IsA("ProximityPrompt") then
+						-- Fire the ProximityPrompt
+						fireproximityprompt(descendant)
+						return -- Exit after firing the first found ProximityPrompt
+					end
+				end
+			else
+			end
+		end
+	
+		-- Call the function to fire the ProximityPrompt
+		teleportToshelterkey()
+		fireProximityPromptInshelterkey()
+	end)
+	
+	
+	coroutine.wrap(checkautoshelterColor)()
+	coroutine.wrap(checkautofragmentcolor)()
+	coroutine.wrap(checkitemespcolor)()
+	coroutine.wrap(checkshelterespcolor)()
+end;
+task.spawn(C_8f);
+
+return G2L["1"], require;
