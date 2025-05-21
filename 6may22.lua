@@ -4621,7 +4621,7 @@ local function C_112()
 			local function teleportToNext()
 				if customDelayTeleportBeforeNext then
 					local stage1Value = otherData:WaitForChild("Stage1")
-					if stage1Value.Value == "" then
+					if stage1Value.Value ~= "" then
 						teleportPlayerToCustomPosition(stage9CustomPosition)
 					end
 					wait(0.5)
